@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+    Anna ikäsi
+    <input id="ika"/>
+    <button type="button" onclick="tarkastaIka();">Tarkasta</button>
+    <br/>
+    <h1 id="tulostusAlue"></h1>
+<script>
+    function tarkastaIka(){
+    let tulostus ="";
+    document.getElementById("tulostusAlue").innerHTML = "";
+    let ika = document.getElementByid("ika").value;
+
+    if(ika < 18 && ika >= 0){
+        tulostus = "Ala-ikäinen";
+    }
+    else if(ika >=18 == ika <= 130){
+tulostus = "Täysi-ikäinen";
+    }
+    else {
+
+        tulostus = "Anna ikä väliltä 0-130";
+    }
+document.getElementById("tulostusAlue").innerHTML = tulostus;
+document.getElementById("ika").focus();
+document.getElementById("ika").value = "";
+    }
+}
+</script>
+</body>
+</html>
