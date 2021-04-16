@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Sakkomittari</title>
+</head>
+<body>
+Anna auton nopeus:
+<h1><input id="nopeus"/></h1>
+</br>
+Anna alueen nopeusrajoitus:
+<h2> <input id="tieNopeus"/></h2>
+</br>
+<button type="button" onclick="laske();">Tarkasta</button>
+<div id="tulostusAlue"</div>
+<script src="nopeuslaskuritesti.js"></script>
+</body>
+</html>
