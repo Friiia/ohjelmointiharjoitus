@@ -1,32 +1,53 @@
-function laske(){
-    let print = "";
+function laske()
+{  
     document.getElementById("tulostusAlue").innerHTML="";
-    let nopeus = document.getElementById("nopeus").value;
-    let tieNopeus = document.getElementById("tieNopeus").value;
-    let pieniYli = tieNopeus + 10;
-    let vahanYli = tieNopeus + 15;
-    let paljonYli = tieNopeus + 20;
+
+	  let nopeus = parseInt(document.getElementById("nopeus").value, 10);
+    let tieNopeus = parseInt(document.getElementById("tieNopeus").value, 10);
+    let toimintaohje = "";
     
-    if (nopeus < tieNopeus){
-    print = " Hyvää matkaa";
-    }
-    // Hyvää matkaa tulee siis siinä vaiheessa, jos auton nopeus on alle sen, mitä käyttäjä syöttää tieNopeus-kenttään
     
-    else if (nopeus > pieniYli){
-        print = "Määrää liikennesakko 100e";
-      //100 e mätkähtää jos ajat 1-10km/h ylinopeutta
+    if (nopeus <= tieNopeus)
+
+    toimintaohje ="toivota hyvää matkaa!"
+
+    else if (nopeus <= tieNopeus + 10){
+    toimintaohje ="Määrää liikennevirhemaksu 70e"
+    
+    if (tieNopeus >= 60)
+    
+        toimintohje += ""
+
+   else  if (nopeus <= tieNopeus + 15){
+    toimintaohje ="Määrää liikennevirhemaksu 140"
     }
-   else if (nopeus > vahanYli){
-        print = "Määrää liikennesakko 170e";
-       //170e sakkoa jos ajat 11-15km/h ylinopeutta
-   }     
- else  if (nopeus > paljonYli){
-    print = "Määrää liikennesakko 200e";
-     //jos ajat 16-20km/h ylinopeutta
- }
-else if (nopeus > tieNopeus) {
-    print = " Tarkista tulot ja määrää päiväsakko";
-    //mikäli olet niin idiootti, että ajat yli 20km/h karkuun ja jäät kiinni
-}
-document.getElementById("tulostusAlue").innerHTML = print;
+    else if (nopeus <= tieNopeus + 20)
+    toimintaohje =" Määrää liikennevirhemaksu 170e"
+    }
+		if (nopeus <= tieNopeus)
+		{
+	    toimintaohje = "Toivota hyvää matkaa!";
+		}
+		else if (nopeus <= tieNopeus + 10)
+		{
+    	toimintaohje = "Määrää liikennevirhemaksu 100e";
+
+    	if (tieNopeus <= 60)
+		    toimintaohje += ""
+        }
+        else if (nopeus <= tieNopeus +15)
+        {
+          toimintaohje = "Määrää liikennevirhemaksu 170e";
+          }
+		else if (nopeus <= tieNopeus + 20)
+	  {
+  		toimintaohje = "Määrää liikennevirhemaksu!200e";
+		}
+		else
+		{
+  		toimintaohje = "Tarkista tulot ja  määrää päiväsakko!";
+		}
+	
+
+	document.getElementById("tulostusAlue").innerHTML = toimintaohje;
 }
