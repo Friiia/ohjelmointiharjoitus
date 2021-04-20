@@ -7,28 +7,29 @@ function laske()
     
     let toimintaohje = "";
     
-		if (nopeus <= tieNopeus)
+	if (nopeus <= tieNopeus)
 		{
-	    toimintaohje = "Toivota hyvää matkaa!";
-    }
-    else if (nopeus <= tieNopeus + 10)
+toimintaohje = "Toivota hyvää matkaa!";
+		}
+	else if (nopeus <= tieNopeus + 10)
 		{
-    	toimintaohje = "Määrää liikennevirhemaksu";
-	
-    	if (tieNopeus <= 60)
-		    toimintaohje += "100"
+toimintaohje = "Määrää liikennevirhemaksu";
+
+	if (tieNopeus <= 60)
+ toimintaohje += "100"
 		}
     
-      else if (nopeus <= tieNopeus + 15)
+	else if (nopeus <= tieNopeus + 15)
 	  {
-  		toimintaohje = "170";
+toimintaohje = "170";
 		}
-		else if (nopeus <= tieNopeus + 20)
+	else if (nopeus <= tieNopeus + 20)
 	  {
-    	toimintaohje = "200";
+toimintaohje = "200";
     
-    	if (tieNopeus >= 60){
-		    toimintaohje += " Määrää liikennevirhemaksu!!"
+    	if (tieNopeus >= 60)
+	{
+toimintaohje += " Määrää liikennevirhemaksu!!"
     }
     else if (nopeus <= tieNopeus + 10){
       toimintaohje = "70e"
