@@ -12,32 +12,42 @@ function laske()
 	    toimintaohje = "Toivota hyvää matkaa!";
 
 		}
-  else  if (tieNopeus >= 60){
-      toimintaohje += "1-10km/h määrää liikennevirhemaksu"
+    if (tieNopeus <= 60) {
+      toimintaohje += "";
+  }
+  else if (nopeus <= tieNopeus + 20)
+      {
+        toimintaohje = "200";
+        }
+  else if (nopeus <= tieNopeus +15){
+toimintaohje="170e"
+
+        }
+if (nopeus <= tieNopeus + 10)
+      {
+          toimintaohje = "100e";
+        }
+   if (tieNopeus >= 60){
+      toimintaohje += ""
    }
-    else if (nopeus <= tieNopeus + 10){
-      toimintaohje = "Määrää liikennevirhemaksu 70e!";
-    
-    }
-    else if (nopeus <= tieNopeus +15){
-      toimintaohje = "Määrää liikennevirhemaksu 170e";
-    }
-    else if (nopeus <= tieNopeus + 20)
-        {
-          toimintaohje = "määrää liikennevirhemaksu! 200e";
-        }
-          if (tieNopeus <= 60) {
-            toimintaohje += "1-10 km/h 100 euroa!";
-        }
-    else if (nopeus <= tieNopeus + 10)
-        {
-            toimintaohje = "Määrää liikennevirhemaksu! 100e";
-          }
-    
-        else {
-  		toimintaohje = "sakko";
-		}
    
+     else if (nopeus <= tieNopeus + 20)
+        {
+          toimintaohje = "määrää liikennevirhemaksu! 170e";
+        }
+       else  if (nopeus <= tieNopeus +15){
+          toimintaohje = "Määrää liikennevirhemaksu 140e";
+        }
+  if (nopeus <= tieNopeus + 10)
+          {
+            toimintaohje = "Määrää liikennevirhemaksu 70e!";
+          
+          }
+         
+        else {
+  		toimintaohje = "Tarkista tulot ja määrää päiväsakko!";
+		
+        }
 
 	document.getElementById("tulostusAlue").innerHTML = toimintaohje;
-    }
+        }
