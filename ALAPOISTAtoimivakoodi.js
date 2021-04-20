@@ -12,22 +12,23 @@ function laske()
 	    toimintaohje = "Toivota hyvää matkaa!";
 
 		}
-    else if (tieNopeus >=60){
-      toimintaohje += "1-10km/h 70euroa"
+  else  if (tieNopeus >= 60){
+      toimintaohje += "1-10km/h määrää liikennevirhemaksu"
+   }
+    else if (nopeus <= tieNopeus + 10){
+      toimintaohje = "Määrää liikennevirhemaksu 70e!";
+    
     }
-    else if (nopeus <= tieNopeus + 20){
-      toimintaohje = "Määrää liikennevirhemaksu 170e!";
+    else if (nopeus <= tieNopeus +15){
+      toimintaohje = "Määrää liikennevirhemaksu 170e";
     }
-    else if (nopeus <=tieNopeus +10){
-      toimintaohje = "Määrää liikennevirhemaksu 70e";
-    }
-        else if (tieNopeus <= 60) {
-		    toimintaohje += "1-10 km/h 100 euroa!";
-		}
     else if (nopeus <= tieNopeus + 20)
         {
           toimintaohje = "määrää liikennevirhemaksu! 200e";
-          }
+        }
+          if (tieNopeus <= 60) {
+            toimintaohje += "1-10 km/h 100 euroa!";
+        }
     else if (nopeus <= tieNopeus + 10)
         {
             toimintaohje = "Määrää liikennevirhemaksu! 100e";
@@ -36,7 +37,7 @@ function laske()
         else {
   		toimintaohje = "sakko";
 		}
-	
+   
 
 	document.getElementById("tulostusAlue").innerHTML = toimintaohje;
     }
